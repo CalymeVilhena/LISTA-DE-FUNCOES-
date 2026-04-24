@@ -1,0 +1,25 @@
+#include <stdio.h>
+void divisores(float n, float m){
+    
+    if(n/m==0){
+        printf("sao divisores");
+    }else{
+        printf("nao sao");
+    }
+}
+
+int main()
+{
+    float n1,n2;
+    
+    printf("Defina n1:");
+    scanf("%f",&n1);
+    printf("Defina n2:");
+    scanf("%f",&n2);
+    
+    divisores(n1,n2);
+    
+    
+
+    return 0;
+}
