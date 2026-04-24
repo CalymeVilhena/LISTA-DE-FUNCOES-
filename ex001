@@ -1,0 +1,20 @@
+#include <stdio.h>
+void volumeEsfera (double raio){
+    double volume, pi = 3.14;
+    
+    volume = (4.0/3.0)*pi*raio;
+    
+    printf("O volume eh : %lf",volume);
+    
+}
+int main()
+{
+    double raio;
+    
+    printf("Defina o raio: ");
+    scanf("%lf",&raio);
+    
+    volumeEsfera(raio);
+    
+    return 0;
+}
