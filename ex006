@@ -1,7 +1,7 @@
 #include <stdio.h>
 void divisores(float n, float m){
     
-    if(n/m==0){
+    if(n%m==0){
         printf("sao divisores");
     }else{
         printf("nao sao");
