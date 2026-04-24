@@ -1,0 +1,55 @@
+#include <stdio.h>
+
+/*
+    Função que simula uma pausa.
+
+    Observação:
+    Este tempo não é exato, pois depende da velocidade
+    do computador. É apenas uma simulação didática.
+*/
+void tempo(int segundos) {
+    long long i;
+    long long limite;
+
+    limite = segundos * 300000000LL;
+
+    for (i = 0; i < limite; i++) {
+        // laço vazio apenas para gastar tempo
+    }
+}
+
+int main() {
+    int numero;
+    int intervalo;
+    int i;
+
+    printf("Digite o numero inicial da contagem regressiva: ");
+    scanf("%d", &numero);
+
+    printf("Digite o intervalo entre cada numero em segundos: ");
+    scanf("%d", &intervalo);
+
+    if (numero < 0) {
+        printf("O numero inicial deve ser maior ou igual a zero.\n");
+        return 1;
+    }
+
+    if (intervalo <= 0) {
+        printf("O intervalo deve ser maior que zero.\n");
+        return 1;
+    }
+
+    printf("\nContagem regressiva:\n");
+
+    for (i = numero; i >= 0; i--) {
+        printf("%d\n", i);
+
+        if (i > 0) {
+            tempo(intervalo);
+        }
+    }
+
+    printf("Fim!\n");
+
+    return 0;
+}
