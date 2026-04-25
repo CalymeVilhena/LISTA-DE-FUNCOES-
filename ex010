@@ -1,0 +1,11 @@
+#include <stdio.h>
+   void calculoMdc(int n,int m){
+       int i, divisao1, divisao2;
+        while(b!=0){
+            resto = a%b;
+            a=b;
+            b=resto;
+        }
+        //retorna a pois é o resultado final
+        return a;
+    }
