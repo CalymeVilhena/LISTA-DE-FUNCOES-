@@ -1,0 +1,58 @@
+#include <stdio.h>
+   float fazenda(float peso){
+        int opcao, sexo;
+        
+        do {
+        
+        printf("\n--- MENU DE ESCOLHA ---\n");
+        printf("1. Bovinos 1\n");
+        printf("2. Ovinos\n");
+        printf("3. caprinos \n");
+        printf("0. encerra \n");
+        printf("Escolha uma opcao: ");
+        scanf("%d", &opcao);
+
+      
+        switch (opcao) {
+            case 1:
+                do{
+                    printf("1. Feminino\n");
+                    printf("2.Masculino\n");
+                    scanf("%d",sexo);
+                        switch(sexo){
+                            case 1:
+                            
+                            soma+=peso
+                            mediaFB= soma/total
+                            break;
+                            
+                            case 2:
+                            soma+=peso
+                            mediaMB = soma/total;
+                            break;
+                        }
+                        
+                        total++;
+                }while(peso!=0);
+                
+                printf("Media: %f",mediaCaprinos);
+                break;
+            case 2:
+                printf("Media: %f",mediaCaprinos);
+                break;
+            case 3:
+                printf("Media: %f",mediaCaprinos);
+                break;
+            case 0:
+                printf("Media: %f",mediaCaprinos);
+                break;
+            default:
+                printf("Opcao invalida! Tente novamente.\n");
+        }
+    } while (opcao != 0); // Continua até o usuário digitar 0
+        
+        
+        
+    
+    
+}
