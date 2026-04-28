@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+    void divisiveis(float a, float b){
+        
+        float resultado;
+        
+        resultado = a/b*b;
+        
+        if(resultado == a){
+            printf("Os numeros %.2f e %.2f sao divisiveis",a,b);
+        
+        }else{
+            printf("nao sao divisiveis");
+        }
+            
+    }
+    
+    
+int main(){
+    float a,b;
+    
+    scanf("%f", &a);
+    scanf("%f", &b);
+    
+    divisiveis(a,b);
+    
+}
