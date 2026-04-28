@@ -1,0 +1,33 @@
+/*Faça uma função que possibilite o arredondamento de um número real para um número inteiro
+seguindo os padrões científicos.*/
+
+#include <stdio.h>
+
+int arredondar(float n) {
+
+	//transfroma n em inteiro
+	int inteiro = (int)n;
+  
+	//subtrai inteiro do numero e sobra o decimal
+	float decimal = n - inteiro;
+
+	//verifica se o decimal é maior ou igual a 0.5
+	if(decimal >= 0.5) {
+		return inteiro + 1; //retorna o valor do inteiro + 1
+
+	} else if(decimal <= 0.5) {
+		return inteiro - 1;
+		
+	}
+
+}
+int main() {
+    float n;
+
+    printf("Digite um numero: ");
+    scanf("%f", &n);
+
+    printf("Arredondado: %d\n", arredondar(n));
+
+    return 0;
+}
