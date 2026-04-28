@@ -1,0 +1,112 @@
+#include <stdio.h>
+
+#define TAM 4
+
+// Ler valores
+void valoresVetor(int vet[]) {
+    printf("Digite os valores do vetor:\n");
+    for(int i = 0; i < TAM; i++){
+        scanf("%d", &vet[i]);
+    }
+}
+
+// Soma
+int somaValores(int vet[]) {
+    int soma = 0;
+    for(int i = 0; i < TAM; i++) {
+        soma += vet[i];
+    }
+    return soma;
+}
+
+// Média
+float mediaValores(int vet[]) {
+    int soma = somaValores(vet);
+    return (float)soma / TAM;
+}
+
+// Zerar negativos
+void zeraNegativos(int vet[]) {
+    for(int i = 0; i < TAM; i++) {
+        if(vet[i] < 0) {
+            vet[i] = 0;
+        }
+    }
+}
+
+// Zerar repetidos (mantém o primeiro)
+void zeraRepetidos(int vet[]) {
+    for(int i = 0; i < TAM; i++) {
+        if(vet[i] > 0) { // só maiores que zero
+            for(int j = i + 1; j < TAM; j++) {
+                if(vet[i] == vet[j]) {
+                    vet[j] = 0;
+                }
+            }
+        }
+    }
+}
+
+// Mostrar vetor (opcional, ajuda no teste)
+void mostrarVetor(int vet[]) {
+    for(int i = 0; i < TAM; i++) {
+        printf("%d ", vet[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int vet[TAM];
+    int opcao;
+
+    do {
+        printf("\n===== MENU =====\n");
+        printf("1 - Digitar valores\n");
+        printf("2 - Mostrar soma\n");
+        printf("3 - Mostrar media\n");
+        printf("4 - Zerar negativos\n");
+        printf("5 - Zerar repetidos\n");
+        printf("6 - Mostrar vetor\n");
+        printf("0 - Sair\n");
+        printf("Escolha: ");
+        scanf("%d", &opcao);
+
+        switch(opcao) {
+            case 1:
+                valoresVetor(vet);
+                break;
+
+            case 2:
+                printf("Soma: %d\n", somaValores(vet));
+                break;
+
+            case 3:
+                printf("Media: %.2f\n", mediaValores(vet));
+                break;
+
+            case 4:
+                zeraNegativos(vet);
+                printf("Negativos zerados!\n");
+                break;
+
+            case 5:
+                zeraRepetidos(vet);
+                printf("Repetidos zerados!\n");
+                break;
+
+            case 6:
+                mostrarVetor(vet);
+                break;
+
+            case 0:
+                printf("Saindo...\n");
+                break;
+
+            default:
+                printf("Opcao invalida!\n");
+        }
+
+    } while(opcao != 0);
+
+    return 0;
+}
