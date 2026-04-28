@@ -3,11 +3,11 @@ seguindo os padrões científicos.*/
 
 #include <stdio.h>
 
+//a funçao é do tipo int pois o objetivo é retornar um valor inteiro 
 int arredondar(float n) {
 
 	//transfroma n em inteiro
 	int inteiro = (int)n;
-  
 	//subtrai inteiro do numero e sobra o decimal
 	float decimal = n - inteiro;
 
