@@ -1,11 +1,27 @@
 #include <stdio.h>
-   void calculoMdc(int n,int m){
-       int i, divisao1, divisao2;
-        while(b!=0){
-            resto = a%b;
-            a=b;
-            b=resto;
-        }
-        //retorna a pois é o resultado final
-        return a;
+
+int calculoMdc(int a, int b){
+    int resto=0;
+    
+
+    while(b != 0){
+        
+        resto = a % b;
+        a = b;
+        b = resto;
+        
+        printf("%d,%d/%d \n",a,b,resto);
     }
+
+    return a; // aqui retorna o MDC
+}
+int main(){
+    int a, b;
+    
+    scanf("%d",&a);
+    scanf("%d",&b);
+    
+    printf("MDC: %d\n", calculoMdc(a, b));
+
+    return 0;
+}
